@@ -1,6 +1,7 @@
-const add = require('./math');
+import { add } from './math.js';
+import { log } from './logger.js';
 
 console.log(add(5,10));
 
-const log = require('./logger');
+
 log('Hello Web3');

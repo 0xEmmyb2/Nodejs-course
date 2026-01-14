@@ -1,6 +1,5 @@
 const url = 'https://www.google.com';
-function log(message){
+export const log = (message) => {
     console.log(message);
 }
 
-module.exports = log;
