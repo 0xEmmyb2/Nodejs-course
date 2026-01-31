@@ -1,12 +1,7 @@
-const express = require('express');
-const routes = require('./routes');
+const EventEmmitter = require('events');
 
-const app = express();
+const eventEmitter = new EventEmmitter();
 
-// Middleware
-app.use(express.json());
-
-// Use our routes
-app.use('/', routes);
-
-module.exports = app;
+eventEmitter.on('tutorial', () => {
+    console.log("Tutorial event has occured.")
+});
