@@ -1,12 +1,17 @@
 const EventEmmitter = require('events');
+const { use } = require('react');
 const readline = require('readline');
-const r1 = readline.createInterface({input : process.stdin,
+const rl = readline.createInterface({input : process.stdin,
     output: process.stdout
 });
 
 let num1 = Math.floor((Math.random() * 10) + 1);
 let num2 = Math.floor((Math.random() * 10) + 1);
+let answer = num1 + num2;
 
+rl.question(`What is ${num1} + ${num2}?`, (userInput) =>{
+    console.log(userInput);
+})
 
 const eventEmitter = new EventEmmitter();
 
