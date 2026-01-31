@@ -9,9 +9,7 @@ let num1 = Math.floor((Math.random() * 10) + 1);
 let num2 = Math.floor((Math.random() * 10) + 1);
 let answer = num1 + num2;
 
-rl.question(`What is ${num1} + ${num2}?`, (userInput) =>{
-    console.log(userInput);
-})
+
 
 const eventEmitter = new EventEmmitter();
 
@@ -38,3 +36,7 @@ pedro.on('name', ()=>{
 });
 
 pedro.emit('name');
+
+rl.question(`What is ${num1} + ${num2}?`, (userInput) =>{
+    console.log(userInput);
+});
