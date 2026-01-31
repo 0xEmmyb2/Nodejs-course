@@ -1,4 +1,5 @@
 const EventEmmitter = require('events');
+const readline = require('readline');
 
 const eventEmitter = new EventEmmitter();
 
