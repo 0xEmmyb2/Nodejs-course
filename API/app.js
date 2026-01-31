@@ -37,6 +37,8 @@ pedro.on('name', ()=>{
 
 pedro.emit('name');
 
-rl.question(`What is ${num1} + ${num2}?`, (userInput) =>{
-    console.log(userInput);
+rl.question(`What is ${num1} + ${num2}? \n`, (userInput) =>{
+    if(userInput.trim() == answer){
+        rl.close(); //Close the application if the user inputs the right answer.
+    }
 });
