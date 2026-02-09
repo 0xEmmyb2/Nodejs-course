@@ -22,7 +22,8 @@
   "homepage": "https://github.com/cyubahiro-emmy0/Nodejs-course#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "mongodb": "^7.1.0"
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.1.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
