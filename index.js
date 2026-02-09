@@ -14,3 +14,4 @@ mongoose.connect("mongodb+srv://cyubahiroemmy12_db_user:cUgTzCHEdTeKu757@backend
 .then(() => {
     console.log("Connected to database!");
 })
+.catch(() => {})
