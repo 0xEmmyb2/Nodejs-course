@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node index", 
+    "serve": "node index",
     "dev": "nodemon index"
   },
   "repository": {
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/cyubahiro-emmy0/Nodejs-course#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongodb": "^7.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
