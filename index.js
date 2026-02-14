@@ -10,6 +10,8 @@ app.get('/', (req, res) => {
     res.send("Hello from the Node API Server Updated");
 });
 
+app.post
+
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@${cluster}mongodb.net/?appName=BackendDB`)
 .then(() => {
     console.log("Connected to database!");
