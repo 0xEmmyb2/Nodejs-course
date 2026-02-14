@@ -14,13 +14,12 @@ app.post('/api/products', (req, res) => {
     res.send("Data received");
 });
 
+// Start server first so it runs even if DB connection fails
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@${cluster}.mongodb.net/?appName=BackendDB`)
-.then(() => {
-    console.log("Connected to database!");
-    app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
-})
-.catch((error) => {
-    console.error("Connection failed!",error);
-});
+    .then(() => console.log("Connected to database!"))
+    .catch((error) => console.error("Database connection failed:", error.message));
