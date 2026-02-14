@@ -14,7 +14,7 @@ app.post('/api/products', (req, res) => {
     res.send("Data received");
 });
 
-// Start server first so it runs even if DB connection fails
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
