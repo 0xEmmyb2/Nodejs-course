@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { application } from 'express';
 import mongoose from 'mongoose';
 import Product from './models/product.model.js';
 
@@ -25,6 +25,16 @@ app.get('/api/products', async (req,res) => {
     }
 })
 
+application.get('/api/products/:id', async (req,res) => {
+    try {
+        
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
+
+//Get to view objects as they appear in the database.
 app.post("/api/products", async (req, res) => {
   try{
       const product = await Product.create(req.body);
@@ -35,6 +45,8 @@ app.post("/api/products", async (req, res) => {
   }
 });
 
+
+//Connection to the database
 mongoose
   .connect(
     `mongodb+srv://${dbUser}:${dbPass}@${cluster}.ugxei1n.mongodb.net/?appName=BackendDB`
