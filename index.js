@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
-const dbUser = "Emmy_user1";
-const dbPass = "Barca2026";
+const dbUser = "cyubahiroemmy12_db_user";
+const dbPass = "cBCTbXzeXmMtkJUs";
 const cluster = "backenddb";
 
 app.get("/", (req, res) => {
@@ -16,7 +16,7 @@ app.post("/api/products", (req, res) => {
 
 mongoose
   .connect(
-    `mongodb+srv://${dbUser}:${dbPass}@${cluster}.ugxeiln.mongodb.net/?appName=BackendDB`,
+    `mongodb+srv://${dbUser}:${dbPass}@${cluster}.ugxei1n.mongodb.net/?appName=BackendDB`
   )
   .then(() => {
     console.log("Connected to database!");
