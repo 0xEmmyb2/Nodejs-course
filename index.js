@@ -1,7 +1,9 @@
-const express = require("express");
-const mongoose = require("mongoose");
+import express from 'express';
+import mongoose from 'mongoose';
+import Product from './models/product.model.js';
+
 const app = express();
-const Product = require('./models/product.model.js');
+
 
 const dbUser = "cyubahiroemmy12_db_user";
 const dbPass = "cBCTbXzeXmMtkJUs";
