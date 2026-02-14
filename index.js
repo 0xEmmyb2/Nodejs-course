@@ -13,6 +13,6 @@ mongoose.connect("mongodb+srv://cyubahiroemmy12_db_user:cUgTzCHEdTeKu757@backend
     console.log('Server is running on port 3000');
 });
 })
-.catch(() => {
-    console.log("Connection failed!");
+.catch((error) => {
+    console.error("Connection failed!",error);
 });
