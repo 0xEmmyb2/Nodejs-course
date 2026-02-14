@@ -10,9 +10,11 @@ app.get('/', (req, res) => {
     res.send("Hello from the Node API Server Updated");
 });
 
-app.post
+app.post('/api/products', (req, res) => {
+    res.send("Data received");
+});
 
-mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@${cluster}mongodb.net/?appName=BackendDB`)
+mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@${cluster}.mongodb.net/?appName=BackendDB`)
 .then(() => {
     console.log("Connected to database!");
     app.listen(3000, () => {
