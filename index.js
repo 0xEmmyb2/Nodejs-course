@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     res.send("Hello from the Node API Server Updated");
 });
 
-mongoose.connect("mongodb+srv://cyubahiroemmy12_db_user:cUgTzCHEdTeKu757@backenddb.ugxei1n.mongodb.net/CRUD-API?appName=BackendDB")
+mongoose.connect("mongodb+srv://cyubahiroemmy12_db_user:<db_password>@backenddb.ugxei1n.mongodb.net/?appName=BackendDB")
 .then(() => {
     console.log("Connected to database!");
     app.listen(3000, () => {
