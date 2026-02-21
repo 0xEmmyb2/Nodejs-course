@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// Changed to require and added updateProduct to the list
 const { 
     getProducts, 
     getProduct, 
@@ -11,7 +10,7 @@ const {
 } = require('../controllers/product.controller.js');
 
 
-router.get('/', getProducts);
+router.get('/products', getProducts);
 
 router.get("/:id", getProduct);
 
