@@ -26,21 +26,10 @@ app.get("/", (req, res) => {
 
 
 
-//Getting an object or name with a certain id
-app.get('/api/products/:id', async (req,res) => {
-    
-})
-
 
 //Get to view objects as they appear in the database.
 app.post("/api/products", async (req, res) => {
-  try{
-      const product = await Product.create(req.body);
-      res.status(200).json(product);
-  } catch (error){
-    console.error(error);
-    res.status(500).json({message: error.message});
-  }
+  
 });
 
 
