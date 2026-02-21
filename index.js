@@ -35,7 +35,7 @@ app.get('/api/products', async (req,res) => {
 
 
 //Getting an object or name with a certain id
-app.get('/api/product/:id', async (req,res) => {
+app.get('/api/products/:id', async (req,res) => {
     try {
         const { id } = req.params;
         const product = await Product.findById(id);
@@ -59,7 +59,7 @@ app.post("/api/products", async (req, res) => {
 
 
 //Update a product 
-app.put('/api/product/:id', async (req,res) => {
+app.put('/api/products/:id', async (req,res) => {
   try {
     const {id} = req.params;
     const updatedProduct = await Product.findByIdAndUpdate(id, req.body,{ new: true, runValidators: true});
@@ -76,7 +76,7 @@ app.put('/api/product/:id', async (req,res) => {
 
 
 //Deleting a product
-app.delete('/api/product/:id', async (req,res) => {
+app.delete('/api/products/:id', async (req,res) => {
   try {
     const {id} = req.params;
     const deletedProduct = await Product.findByIdAndDelete(id);
