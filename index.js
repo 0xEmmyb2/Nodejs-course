@@ -9,6 +9,8 @@ const dbUser = "cyubahiroemmy12_db_user";
 const dbPass = "cBCTbXzeXmMtkJUs";
 const cluster = "backenddb";
 
+
+//Middleware configuration
 app.use(express.json());
 //Adding the form URL Encoded
 app.use(express.urlencoded({extended: false}));
