@@ -10,4 +10,7 @@ router.get("/:id", getProduct);
 
 router.post("/", createProduct);
 
+router.put("/:id", updateProduct);
+
+
 export default router;

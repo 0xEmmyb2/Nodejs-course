@@ -27,12 +27,6 @@ app.get("/", (req, res) => {
 
 
 
-//Get to view objects as they appear in the database.
-app.post("/api/products", async (req, res) => {
-  
-});
-
-
 //Update a product 
 app.put('/api/products/:id', async (req,res) => {
   try {

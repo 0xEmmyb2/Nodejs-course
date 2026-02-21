@@ -36,4 +36,6 @@ const createProduct = async (req, res) => {
   }
 };
 
-export default { getProducts, getProduct, createProduct };
+//Updating a product
+
+export default { getProducts, getProduct, createProduct, updateProduct };
