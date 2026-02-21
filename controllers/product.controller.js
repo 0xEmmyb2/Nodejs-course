@@ -11,4 +11,8 @@ const getProducts = async (req,res) =>{
     }
 };
 
+const getProduct = async(req,res) =>{
+    
+}
+
 export default getProducts;
