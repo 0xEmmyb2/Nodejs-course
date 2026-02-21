@@ -10,7 +10,7 @@ const {
 } = require('../controllers/product.controller.js');
 
 
-router.get('/', getProducts);
+router.get('/products', getProducts);
 
 router.get("/:id", getProduct);
 
