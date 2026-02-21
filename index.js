@@ -31,7 +31,7 @@ app.get('/api/products', async (req,res) => {
         console.error(error);
         res.status(500).json({message: error.message});
     }
-})
+});
 
 
 //Getting an object or name with a certain id
