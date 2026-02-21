@@ -1,5 +1,4 @@
-import express from "express";
-import Product from "../models/product.model";
+const Product = require("../models/product.model.js");
 
 //Showing all the products
 const getProducts = async (req, res) => {
@@ -69,7 +68,8 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-export default {
+// Fixed the typo: module.exports (singular module, plural exports)
+module.exports = {
   getProducts,
   getProduct,
   createProduct,

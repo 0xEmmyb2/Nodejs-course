@@ -1,7 +1,14 @@
-import express from 'express';
-import Product from '../models/product.model'
+const express = require('express');
 const router = express.Router();
-import {getProducts, getProduct, createProduct} from '../controllers/product.controller'
+
+// Changed to require and added updateProduct to the list
+const { 
+    getProducts, 
+    getProduct, 
+    createProduct, 
+    updateProduct, 
+    deleteProduct 
+} = require('../controllers/product.controller.js');
 
 
 router.get('/', getProducts);
@@ -16,4 +23,4 @@ router.put("/:id", updateProduct);
 router.delete("/:id", deleteProduct);
 
 
-export default router;
+module.exports = router;

@@ -1,7 +1,7 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import Product from './models/product.model.js'
-import productRoute from './routes/product.route.js'
+const express = require('express');
+const mongoose = require('mongoose');
+const productRoute = require('./routes/product.route');
+const Product = require("./models/product.model");
 
 const app = express();
 
