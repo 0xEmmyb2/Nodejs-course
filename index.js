@@ -24,26 +24,11 @@ app.get("/", (req, res) => {
   res.send("Hello from the Node API Server Updated");
 });
 
-app.get('/api/products', async (req,res) => {
-    try {
-        const products = await Product.find({});
-        res.status(200).json(products);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({message: error.message});
-    }
-});
 
 
 //Getting an object or name with a certain id
 app.get('/api/products/:id', async (req,res) => {
-    try {
-        const { id } = req.params;
-        const product = await Product.findById(id);
-        res.status(200).json(product);
-    } catch (error) {
-        res.status(500).json({message: error.message})
-    }
+    
 })
 
 
