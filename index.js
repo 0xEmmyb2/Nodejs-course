@@ -15,6 +15,10 @@ app.use(express.json());
 //Adding the form URL Encoded
 app.use(express.urlencoded({extended: false}));
 
+
+//routes
+app.use("/api/products",  productRoute);
+
 app.get("/", (req, res) => {
   res.send("Hello from the Node API Server Updated");
 });
