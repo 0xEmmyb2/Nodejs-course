@@ -11,7 +11,7 @@ const cluster = "backenddb";
 
 app.use(express.json());
 //Adding the form URL Encoded
-app.use(express.urlencoded)
+app.use(express.urlencoded({extended: false}));
 
 app.get("/", (req, res) => {
   res.send("Hello from the Node API Server Updated");
