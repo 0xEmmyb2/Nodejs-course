@@ -25,41 +25,6 @@ app.get("/", (req, res) => {
 });
 
 
-
-
-//Update a product 
-app.put('/api/products/:id', async (req,res) => {
-  try {
-    const {id} = req.params;
-    const updatedProduct = await Product.findByIdAndUpdate(id, req.body,{ new: true, runValidators: true});
-
-    if (!updatedProduct){
-      return res.status(404).json({message: "Product Not Found"});
-    }
-
-    res.status(200).json(updatedProduct);
-  } catch (error) {
-    res.status(500).json({message: error.message});
-  }
-});
-
-
-//Deleting a product
-app.delete('/api/products/:id', async (req,res) => {
-  try {
-    const {id} = req.params;
-    const deletedProduct = await Product.findByIdAndDelete(id);
-
-    if(!deletedProduct){
-      return res.status(404).json({message: "Product Not Found"});
-    }
-
-    res.status(200).json({message: "Product deleted successfully."})
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
-})
-
 //Connection to the database
 mongoose
   .connect(
